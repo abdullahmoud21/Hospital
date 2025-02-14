@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Reservations Management";
+}
+
+<h1>Reservations Management</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.PatientName</td>
+                <td>@item.Doctor.Name</td>
+                <td>@item.AppointmentDate</td>
+                <td>@item.AppointmentTime</td>
+        </tr>
+    </tbody>
+    }
+</table>

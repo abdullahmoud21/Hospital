@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Our Hospital";
+}
+
+<div class="text-center display-4">
+    <h1 class="display-4">Welcome to Our Hospital</h1>
+    <p>Thank you for choosing our hospital for your healthcare needs.</p>
+    <p>Here, we strive to provide the highest quality medical care to our patients.</p>
+    <p>Learn more about our services and specialties:</p>
+    <ul class="list-group">
+        <li class="list-group-item">Internal Medicine</li>
+        @foreach (var item in Model.Internal){
+            <p>@item.Name</p>
+        }
+        <li class="list-group-item">Pediatrics</li>
+        @foreach (var item in Model.Pediatrics){
+            <p>@item.Name</p>
+        }
+        <li class="list-group-item">Surgery</li>
+        @foreach (var item in Model.Surgery){
+            <p>@item.Name</p>
+        }
+    </ul>
+    <p>If you have any questions or need assistance, please don't hesitate to contact us.</p>
+</div>
